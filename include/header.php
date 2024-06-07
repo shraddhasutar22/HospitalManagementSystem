@@ -28,14 +28,14 @@
 						
 							<li class="dropdown current-user">
 								<a href class="dropdown-toggle" data-toggle="dropdown">
-									<img src="assets/images/images.jpg" > <span class="username">
+									<img src="assets/images/images.jpg"> <span class="username">
 
 
 
-									<?php $query=mysqli_query($con,"select doctorName from doctors where id='".$_SESSION['id']."'");
+									<?php $query=mysqli_query($con,"select fullName from users where id='".$_SESSION['id']."'");
 while($row=mysqli_fetch_array($query))
 {
-	echo $row['doctorName'];
+	echo $row['fullName'];
 }
 									?> <i class="ti-angle-down"></i></i></span>
 								</a>
